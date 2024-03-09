@@ -56,4 +56,4 @@ class FileStorage:
                 elif class_name == 'Place':
                     self.__objects[k] = Place(**v)
                 elif class_name == 'Review':
-                    self.__objects[k] = Review(**v)s
+                    self.__objects[k] = Review(**v)
