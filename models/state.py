@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-
-"""creates a new class."""
-
+"""Defines the State class."""
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """creates a new class that imports from BaseModel."""
+    """Represent a state.
+
+    Attributes:
+        name (str): The name of the state.
+    """
+
     name = ""
