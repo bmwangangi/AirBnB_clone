@@ -47,7 +47,7 @@ class BaseModel:
         return my_dict
 
 class EURJPY(BaseModel):
-    """EURJPY class to represent Airbnb listings."""
+    """EURJPY class represent Airbnb listings."""
 
     def __init__(self, *args, **kwargs):
         """Initialize a new instance of the EURJPY class."""
