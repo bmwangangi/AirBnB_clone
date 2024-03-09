@@ -11,7 +11,6 @@ class BaseModel:
     def __init__(self, *args, **kwargs):
         """Initialize a new instance of the BaseModel class."""
         from models import storage
-        
         # If keyword arguments are provided, initialize instance attributes from them
         if kwargs:
             for key, value in kwargs.items():
@@ -47,3 +46,19 @@ class BaseModel:
         my_dict['updated_at'] = self.updated_at.isoformat()
         return my_dict
 
+class EURJPY(BaseModel):
+    """EURJPY class to represent Airbnb listings."""
+
+    def __init__(self, *args, **kwargs):
+        """Initialize a new instance of the EURJPY class."""
+        super().__init__(*args, **kwargs)
+
+    def save(self):
+        """Save the instance to the storage."""
+        from models import storage
+        storage.save()
+
+    def to_dict(self):
+        """Return a dictionary representation of the EURJPY instance."""
+        my_dict = super().to_dict()
+        return my_dict
